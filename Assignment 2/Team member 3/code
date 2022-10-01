@@ -1,0 +1,31 @@
+Program 1:
+
+t=int(input("enter the temperature")) 
+h=int(input("enter the humidity")) 
+while(t>35):
+      print("buzzer on")
+
+
+Program 2:
+import time
+from random import randint
+file=open("data.txt","a")
+n=5
+for i in range(n):
+    humidity=randint(0,100)+1
+    temperature=randint(-100,100)+1
+    if humidity>45:
+        print("\n \n Humidity High")
+        print(humidity)
+
+        file.write("\nHumidity")
+        file.write(str(humidity))
+
+    if temperature>30:
+        print("Temperature High")
+        print( temperature)
+
+        file.write("\nTemperature")
+        file.write(str(temperature))
+    time.sleep(1)
+file.close()
